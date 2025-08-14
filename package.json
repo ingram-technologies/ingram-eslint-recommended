@@ -1,0 +1,39 @@
+{
+	"name": "@ingram-tech/eslint-plugin-recommended",
+	"version": "1.0.0",
+	"description": "ESLint plugin with recommended rules for Ingram Tech projects",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"prepublishOnly": "npm run build",
+		"test": "echo \"No tests yet\""
+	},
+	"keywords": [
+		"eslint",
+		"eslintplugin",
+		"eslint-plugin"
+	],
+	"author": "Ingram Tech",
+	"license": "MIT",
+	"peerDependencies": {
+		"eslint": ">=8.0.0"
+	},
+	"devDependencies": {
+		"@types/eslint": "^8.56.0",
+		"@types/node": "^20.0.0",
+		"@typescript-eslint/types": "^7.0.0",
+		"eslint": "^8.57.0",
+		"typescript": "^5.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ingram-technologies/ingram-eslint-recommended.git"
+	}
+}
