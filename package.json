@@ -10,6 +10,7 @@
 	"scripts": {
 		"build": "tsc",
 		"prepublishOnly": "npm run build",
+		"format": "prettier --write src/**/* *.json",
 		"test": "echo \"No tests yet\""
 	},
 	"keywords": [
@@ -27,6 +28,8 @@
 		"@types/node": "^20.0.0",
 		"@typescript-eslint/types": "^7.0.0",
 		"eslint": "^8.57.0",
+		"prettier": "^3.6.2",
+		"prettier-plugin-organize-imports": "^4.2.0",
 		"typescript": "^5.0.0"
 	},
 	"publishConfig": {
@@ -35,5 +38,27 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ingram-technologies/ingram-eslint-recommended.git"
+	},
+	"prettier": {
+		"trailingComma": "all",
+		"printWidth": 88,
+		"useTabs": true,
+		"tabWidth": 4,
+		"experimentalOperatorPosition": "start",
+		"plugins": [
+			"prettier-plugin-organize-imports"
+		],
+		"overrides": [
+			{
+				"files": [
+					"*.yaml",
+					"*.yml"
+				],
+				"options": {
+					"useTabs": false,
+					"tabWidth": 2
+				}
+			}
+		]
 	}
 }
